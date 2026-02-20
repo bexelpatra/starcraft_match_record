@@ -1,0 +1,10 @@
+{
+  "replay_dir": "",
+  "db_path": "D:\\pypy\\star_record\\star_record.db",
+  "my_names": [
+    "kimsabuho"
+  ],
+  "auto_detect_me": true,
+  "watch_interval_seconds": 2,
+  "notify_on_new_game": true
+}

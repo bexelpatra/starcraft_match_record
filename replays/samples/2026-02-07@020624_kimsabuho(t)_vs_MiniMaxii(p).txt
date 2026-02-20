@@ -1,0 +1,45 @@
+======================================================================
+       StarCraft Brood War / Remastered Replay Analysis
+======================================================================
+
+[File Information]
+  Filename       : 2026-02-07@020624_kimsabuho(t)_vs_MiniMaxii(p).rep
+  Size           : 84,203 bytes
+
+[Game Information]
+  Game Type      : Custom
+  Map Size       : 128x128
+  Duration       : 7m 33s
+  Total Frames   : 10,806
+  Result         : kimsabuho wins
+  Determined by  : Leave Game command
+
+[Map Information]
+  Tileset        : Space Platform
+
+[Players]
+  kimsabuho (Terran) [WINNER]
+  MiniMaxii (Protoss) [LOSER]
+
+[Game Statistics]
+  Total Commands : 4,814
+
+  MiniMaxii:
+    - Total Actions  : 3,761
+    - APM            : 496.6
+
+    Unit Production:
+      - Guardian: 2
+      - Unit_1239: 1
+      - Unit_1260: 1
+
+  kimsabuho:
+    - Total Actions  : 1,053
+    - APM            : 132.6
+
+    Unit Production:
+
+[Chat Log]
+  (no chat messages)
+
+======================================================================
