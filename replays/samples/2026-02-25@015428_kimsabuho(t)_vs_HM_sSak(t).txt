@@ -3,36 +3,37 @@
 ======================================================================
 
 [File Information]
-  Filename       : 2026-02-07@020624_kimsabuho(t)_vs_MiniMaxii(p).rep
-  Size           : 84,203 bytes
+  Filename       : 2026-02-25@015428_kimsabuho(t)_vs_HM_sSak(t).rep
+  Size           : 164,046 bytes
 
 [Game Information]
   Game Type      : Custom
   Map Size       : 128x128
-  Duration       : 7m 33s
-  Total Frames   : 10,806
-  Result         : kimsabuho wins
-  Determined by  : Leave Game command
+  Duration       : 35m 51s
+  Total Frames   : 51,232
+  Result         : Undetermined
+  Determined by  : Undetermined
+  Replay Type    : Observer replay (likely)
 
 [Map Information]
   Tileset        : Space Platform
 
 [Players]
-  kimsabuho (Terran) [WINNER]
-  MiniMaxii (Protoss) [LOSER]
+  kimsabuho (Terran)
+  HM_sSak (Terran)
 
 [Game Statistics]
-  Total Commands : 4,814
+  Total Commands : 15,798
 
-  MiniMaxii:
-    - Total Actions  : 3,761
-    - APM            : 496.6
+  HM_sSak:
+    - Total Actions  : 10,672
+    - APM            : 294.5
 
     Unit Production:
 
   kimsabuho:
-    - Total Actions  : 1,053
-    - APM            : 132.6
+    - Total Actions  : 5,126
+    - APM            : 139.1
 
     Unit Production:
 

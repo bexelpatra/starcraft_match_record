@@ -1,9 +1,9 @@
 {
   "file_info": {
     "filename": "2026-02-07@020624_kimsabuho(t)_vs_MiniMaxii(p).rep",
-    "filepath": "D:\\pypy\\star_record\\2026-02-07@020624_kimsabuho(t)_vs_MiniMaxii(p).rep",
+    "filepath": "D:\\pypy\\star_record\\replays\\samples\\2026-02-07@020624_kimsabuho(t)_vs_MiniMaxii(p).rep",
     "size_bytes": 84203,
-    "parsed_at": "2026-02-11T15:10:02.234961"
+    "parsed_at": "2026-02-26T10:54:45.271674"
   },
   "header": {
     "crc": 2478971330,
@@ -93,11 +93,7 @@
           "Unload All": 1,
           "Target Order Alt (Remaster)": 1
         },
-        "unit_production": {
-          "Guardian": 2,
-          "Unit_1239": 1,
-          "Unit_1260": 1
-        }
+        "unit_production": {}
       },
       "0": {
         "name": "kimsabuho",

@@ -122,6 +122,31 @@ class Database:
                 (int(is_me), name),
             )
 
+    def recalculate_my_results(self) -> int:
+        """모든 게임의 my_result를 현재 is_me 설정 기준으로 재계산한다.
+        Returns: 갱신된 게임 수.
+        """
+        my_names = set(self.get_my_names())
+        if not my_names:
+            return 0
+
+        with self._connect() as conn:
+            rows = conn.execute("SELECT id, winner_name, loser_name FROM games").fetchall()
+            updated = 0
+            for row in rows:
+                if row["winner_name"] in my_names:
+                    new_result = "win"
+                elif row["loser_name"] in my_names:
+                    new_result = "loss"
+                else:
+                    new_result = "unknown"
+                conn.execute(
+                    "UPDATE games SET my_result = ? WHERE id = ?",
+                    (new_result, row["id"]),
+                )
+                updated += 1
+            return updated
+
     def get_my_names(self) -> list[str]:
         """is_me=1인 플레이어 이름 목록을 반환한다."""
         with self._connect() as conn:

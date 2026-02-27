@@ -1,5 +1,6 @@
 {
   "replay_dir": "",
+  "starcraft_path": "",
   "db_path": "D:\\pypy\\star_record\\star_record.db",
   "my_names": [
     "kimsabuho"

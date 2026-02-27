@@ -1,0 +1,3720 @@
+{
+  "file_info": {
+    "filename": "2026-02-25@015428_kimsabuho(t)_vs_HM_sSak(t).rep",
+    "filepath": "D:\\pypy\\star_record\\replays\\samples\\2026-02-25@015428_kimsabuho(t)_vs_HM_sSak(t).rep",
+    "size_bytes": 164046,
+    "parsed_at": "2026-02-26T10:54:44.259747"
+  },
+  "header": {
+    "crc": 2478971330,
+    "engine_id": 1,
+    "section_count": 4,
+    "magic": "seRS",
+    "file_size": 164046,
+    "zlib_blocks": 66
+  },
+  "game_info": {
+    "engine": 1,
+    "total_frames": 51232,
+    "duration_seconds": 2151.7,
+    "duration": "35m 51s",
+    "map_width": 128,
+    "map_height": 128,
+    "game_type_id": 1,
+    "game_type": "Custom",
+    "actual_frames": 51193,
+    "actual_duration": "35m 50s",
+    "player_last_action_frame": {
+      "1": 51175,
+      "0": 51193
+    },
+    "observer_replay": true,
+    "result": "Undetermined"
+  },
+  "players": [
+    {
+      "id": 0,
+      "name": "kimsabuho",
+      "race": "Terran"
+    },
+    {
+      "id": 1,
+      "name": "HM_sSak",
+      "race": "Terran"
+    }
+  ],
+  "map_data": {
+    "tileset": "Space Platform"
+  },
+  "map_strings": [],
+  "map_chunks": [
+    "VER ",
+    "TYPE",
+    "IVE2",
+    "VCOD",
+    "IOWN",
+    "OWNR",
+    "SIDE",
+    "COLR",
+    "ERA ",
+    "DIM "
+  ],
+  "statistics": {
+    "total_commands": 15798,
+    "player_stats": {
+      "1": {
+        "name": "HM_sSak",
+        "total_actions": 10672,
+        "real_actions": 10561,
+        "apm": 294.5,
+        "action_breakdown": {
+          "Stop": 4512,
+          "Load Game": 1436,
+          "Save Game": 1284,
+          "Restart Game": 1173,
+          "Right Click (Remaster2)": 597,
+          "Train Fighter": 579,
+          "Resume": 140,
+          "Shift Select": 134,
+          "Targeted Order (Remaster2)": 122,
+          "Keep Alive": 111,
+          "Shift Deselect": 92,
+          "Select (Remaster2)": 84,
+          "Cancel Nuke": 73,
+          "Siege": 62,
+          "Select": 52,
+          "Cancel Upgrade": 35,
+          "Build": 34,
+          "Shift Select (Remaster)": 28,
+          "Unburrow": 27,
+          "Vision": 25,
+          "Target Order Alt (Remaster)": 20,
+          "Unload All": 19,
+          "Sync": 15,
+          "Alliance": 10,
+          "Cloak": 6,
+          "Research": 1,
+          "Merge Archon": 1
+        },
+        "unit_production": {}
+      },
+      "0": {
+        "name": "kimsabuho",
+        "total_actions": 5126,
+        "real_actions": 4989,
+        "apm": 139.1,
+        "action_breakdown": {
+          "Stop": 2774,
+          "Train Fighter": 495,
+          "Load Game": 421,
+          "Right Click (Remaster2)": 354,
+          "Restart Game": 187,
+          "Keep Alive": 137,
+          "Targeted Order (Remaster2)": 132,
+          "Save Game": 109,
+          "Resume": 109,
+          "Cancel Nuke": 106,
+          "Cancel Upgrade": 71,
+          "Select (Remaster2)": 49,
+          "Unburrow": 45,
+          "Shift Select (Remaster)": 31,
+          "Target Order Alt (Remaster)": 31,
+          "Select": 23,
+          "Siege": 14,
+          "Sync": 10,
+          "Unload All": 10,
+          "Shift Select": 4,
+          "Cloak": 4,
+          "Build": 2,
+          "Alliance": 2,
+          "Shift Deselect": 1,
+          "Vision": 1,
+          "Merge Archon": 1,
+          "Unload (Remaster)": 1,
+          "Chat (Remaster)": 1,
+          "Cancel Train (Remaster)": 1
+        },
+        "unit_production": {}
+      }
+    }
+  },
+  "observer_replay": true,
+  "chat_messages": [],
+  "commands": [
+    {
+      "frame": 3,
+      "time_seconds": 0.13,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 49409,
+      "target_y": 44
+    },
+    {
+      "frame": 5,
+      "time_seconds": 0.21,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 5,
+      "time_seconds": 0.21,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 48388,
+      "target_y": 44
+    },
+    {
+      "frame": 26,
+      "time_seconds": 1.09,
+      "player_id": 0,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 47618,
+      "target_y": 44
+    },
+    {
+      "frame": 57,
+      "time_seconds": 2.39,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 60,
+      "time_seconds": 2.52,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 62,
+      "time_seconds": 2.6,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 62,
+      "time_seconds": 2.6,
+      "player_id": 0,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 82,
+      "time_seconds": 3.44,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 82,
+      "time_seconds": 3.44,
+      "player_id": 0,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 87,
+      "time_seconds": 3.65,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 48898,
+      "target_y": 44
+    },
+    {
+      "frame": 91,
+      "time_seconds": 3.82,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 91,
+      "time_seconds": 3.82,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 93,
+      "time_seconds": 3.91,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 93,
+      "time_seconds": 3.91,
+      "player_id": 0,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 94,
+      "time_seconds": 3.95,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 48641,
+      "target_y": 44
+    },
+    {
+      "frame": 96,
+      "time_seconds": 4.03,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 96,
+      "time_seconds": 4.03,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 99,
+      "time_seconds": 4.16,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 48641,
+      "target_y": 44
+    },
+    {
+      "frame": 100,
+      "time_seconds": 4.2,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 100,
+      "time_seconds": 4.2,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 100,
+      "time_seconds": 4.2,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 102,
+      "time_seconds": 4.28,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 102,
+      "time_seconds": 4.28,
+      "player_id": 0,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 104,
+      "time_seconds": 4.37,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 104,
+      "time_seconds": 4.37,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 104,
+      "time_seconds": 4.37,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 104,
+      "time_seconds": 4.37,
+      "player_id": 0,
+      "action_id": 5,
+      "action_name": "Shift Select"
+    },
+    {
+      "frame": 105,
+      "time_seconds": 4.41,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 108,
+      "time_seconds": 4.54,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 108,
+      "time_seconds": 4.54,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 112,
+      "time_seconds": 4.7,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 112,
+      "time_seconds": 4.7,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 116,
+      "time_seconds": 4.87,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 116,
+      "time_seconds": 4.87,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 117,
+      "time_seconds": 4.91,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 117,
+      "time_seconds": 4.91,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 121,
+      "time_seconds": 5.08,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 48641,
+      "target_y": 44
+    },
+    {
+      "frame": 122,
+      "time_seconds": 5.12,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 124,
+      "time_seconds": 5.21,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 124,
+      "time_seconds": 5.21,
+      "player_id": 0,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 124,
+      "time_seconds": 5.21,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 124,
+      "time_seconds": 5.21,
+      "player_id": 0,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 129,
+      "time_seconds": 5.42,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 129,
+      "time_seconds": 5.42,
+      "player_id": 0,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 133,
+      "time_seconds": 5.59,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 133,
+      "time_seconds": 5.59,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 134,
+      "time_seconds": 5.63,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 134,
+      "time_seconds": 5.63,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 134,
+      "time_seconds": 5.63,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 134,
+      "time_seconds": 5.63,
+      "player_id": 0,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 138,
+      "time_seconds": 5.8,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 138,
+      "time_seconds": 5.8,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 138,
+      "time_seconds": 5.8,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 138,
+      "time_seconds": 5.8,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 140,
+      "time_seconds": 5.88,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 140,
+      "time_seconds": 5.88,
+      "player_id": 0,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 144,
+      "time_seconds": 6.05,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 144,
+      "time_seconds": 6.05,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 148,
+      "time_seconds": 6.22,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 148,
+      "time_seconds": 6.22,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 149,
+      "time_seconds": 6.26,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 149,
+      "time_seconds": 6.26,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 151,
+      "time_seconds": 6.34,
+      "player_id": 0,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 47875,
+      "target_y": 44
+    },
+    {
+      "frame": 153,
+      "time_seconds": 6.43,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 153,
+      "time_seconds": 6.43,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 155,
+      "time_seconds": 6.51,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 155,
+      "time_seconds": 6.51,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 156,
+      "time_seconds": 6.55,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 156,
+      "time_seconds": 6.55,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 158,
+      "time_seconds": 6.64,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 158,
+      "time_seconds": 6.64,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 160,
+      "time_seconds": 6.72,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 160,
+      "time_seconds": 6.72,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 161,
+      "time_seconds": 6.76,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 161,
+      "time_seconds": 6.76,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 162,
+      "time_seconds": 6.8,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 162,
+      "time_seconds": 6.8,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 165,
+      "time_seconds": 6.93,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 165,
+      "time_seconds": 6.93,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 169,
+      "time_seconds": 7.1,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 172,
+      "time_seconds": 7.22,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 172,
+      "time_seconds": 7.22,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 174,
+      "time_seconds": 7.31,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 174,
+      "time_seconds": 7.31,
+      "player_id": 0,
+      "action_id": 0,
+      "action_name": "Keep Alive"
+    },
+    {
+      "frame": 175,
+      "time_seconds": 7.35,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 175,
+      "time_seconds": 7.35,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 177,
+      "time_seconds": 7.43,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 177,
+      "time_seconds": 7.43,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 179,
+      "time_seconds": 7.52,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 182,
+      "time_seconds": 7.64,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 182,
+      "time_seconds": 7.64,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 184,
+      "time_seconds": 7.73,
+      "player_id": 0,
+      "action_id": 97,
+      "action_name": "Shift Select (Remaster)"
+    },
+    {
+      "frame": 185,
+      "time_seconds": 7.77,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 185,
+      "time_seconds": 7.77,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 185,
+      "time_seconds": 7.77,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 48900,
+      "target_y": 44
+    },
+    {
+      "frame": 186,
+      "time_seconds": 7.81,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 186,
+      "time_seconds": 7.81,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 188,
+      "time_seconds": 7.9,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 188,
+      "time_seconds": 7.9,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 189,
+      "time_seconds": 7.94,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 189,
+      "time_seconds": 7.94,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 190,
+      "time_seconds": 7.98,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 48900,
+      "target_y": 44
+    },
+    {
+      "frame": 191,
+      "time_seconds": 8.02,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 191,
+      "time_seconds": 8.02,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 191,
+      "time_seconds": 8.02,
+      "player_id": 0,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 47107,
+      "target_y": 44
+    },
+    {
+      "frame": 192,
+      "time_seconds": 8.06,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 192,
+      "time_seconds": 8.06,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 194,
+      "time_seconds": 8.15,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 194,
+      "time_seconds": 8.15,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 195,
+      "time_seconds": 8.19,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 195,
+      "time_seconds": 8.19,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 197,
+      "time_seconds": 8.27,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 197,
+      "time_seconds": 8.27,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 198,
+      "time_seconds": 8.32,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 198,
+      "time_seconds": 8.32,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 200,
+      "time_seconds": 8.4,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 200,
+      "time_seconds": 8.4,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 202,
+      "time_seconds": 8.48,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 202,
+      "time_seconds": 8.48,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 203,
+      "time_seconds": 8.53,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 203,
+      "time_seconds": 8.53,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 204,
+      "time_seconds": 8.57,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 204,
+      "time_seconds": 8.57,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 205,
+      "time_seconds": 8.61,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 205,
+      "time_seconds": 8.61,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 207,
+      "time_seconds": 8.69,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 207,
+      "time_seconds": 8.69,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 208,
+      "time_seconds": 8.74,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 211,
+      "time_seconds": 8.86,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 211,
+      "time_seconds": 8.86,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 212,
+      "time_seconds": 8.9,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 217,
+      "time_seconds": 9.11,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 217,
+      "time_seconds": 9.11,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 222,
+      "time_seconds": 9.32,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 222,
+      "time_seconds": 9.32,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 228,
+      "time_seconds": 9.58,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 228,
+      "time_seconds": 9.58,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 244,
+      "time_seconds": 10.25,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 48642,
+      "target_y": 44
+    },
+    {
+      "frame": 244,
+      "time_seconds": 10.25,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 244,
+      "time_seconds": 10.25,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 245,
+      "time_seconds": 10.29,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 245,
+      "time_seconds": 10.29,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 246,
+      "time_seconds": 10.33,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 246,
+      "time_seconds": 10.33,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 247,
+      "time_seconds": 10.37,
+      "player_id": 0,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 47108,
+      "target_y": 44
+    },
+    {
+      "frame": 249,
+      "time_seconds": 10.46,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 49154,
+      "target_y": 44
+    },
+    {
+      "frame": 249,
+      "time_seconds": 10.46,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 249,
+      "time_seconds": 10.46,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 250,
+      "time_seconds": 10.5,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 250,
+      "time_seconds": 10.5,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 250,
+      "time_seconds": 10.5,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 250,
+      "time_seconds": 10.5,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 252,
+      "time_seconds": 10.58,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 252,
+      "time_seconds": 10.58,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 253,
+      "time_seconds": 10.63,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 253,
+      "time_seconds": 10.63,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 254,
+      "time_seconds": 10.67,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 49155,
+      "target_y": 44
+    },
+    {
+      "frame": 255,
+      "time_seconds": 10.71,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 255,
+      "time_seconds": 10.71,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 255,
+      "time_seconds": 10.71,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 255,
+      "time_seconds": 10.71,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 257,
+      "time_seconds": 10.79,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 257,
+      "time_seconds": 10.79,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 258,
+      "time_seconds": 10.84,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 258,
+      "time_seconds": 10.84,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 259,
+      "time_seconds": 10.88,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 259,
+      "time_seconds": 10.88,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 260,
+      "time_seconds": 10.92,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 260,
+      "time_seconds": 10.92,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 260,
+      "time_seconds": 10.92,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 260,
+      "time_seconds": 10.92,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 262,
+      "time_seconds": 11.0,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 262,
+      "time_seconds": 11.0,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 263,
+      "time_seconds": 11.05,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 263,
+      "time_seconds": 11.05,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 265,
+      "time_seconds": 11.13,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 49409,
+      "target_y": 44
+    },
+    {
+      "frame": 269,
+      "time_seconds": 11.3,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 269,
+      "time_seconds": 11.3,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 270,
+      "time_seconds": 11.34,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 270,
+      "time_seconds": 11.34,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 272,
+      "time_seconds": 11.42,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 272,
+      "time_seconds": 11.42,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 276,
+      "time_seconds": 11.59,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 276,
+      "time_seconds": 11.59,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 282,
+      "time_seconds": 11.84,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 48899,
+      "target_y": 44
+    },
+    {
+      "frame": 283,
+      "time_seconds": 11.89,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 283,
+      "time_seconds": 11.89,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 283,
+      "time_seconds": 11.89,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 283,
+      "time_seconds": 11.89,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 283,
+      "time_seconds": 11.89,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 283,
+      "time_seconds": 11.89,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 286,
+      "time_seconds": 12.01,
+      "player_id": 0,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 47619,
+      "target_y": 44
+    },
+    {
+      "frame": 287,
+      "time_seconds": 12.05,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 48899,
+      "target_y": 44
+    },
+    {
+      "frame": 288,
+      "time_seconds": 12.1,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 288,
+      "time_seconds": 12.1,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 290,
+      "time_seconds": 12.18,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 290,
+      "time_seconds": 12.18,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 291,
+      "time_seconds": 12.22,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 291,
+      "time_seconds": 12.22,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 292,
+      "time_seconds": 12.26,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 292,
+      "time_seconds": 12.26,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 295,
+      "time_seconds": 12.39,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 295,
+      "time_seconds": 12.39,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 295,
+      "time_seconds": 12.39,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 295,
+      "time_seconds": 12.39,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 296,
+      "time_seconds": 12.43,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 296,
+      "time_seconds": 12.43,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 297,
+      "time_seconds": 12.47,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 297,
+      "time_seconds": 12.47,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 298,
+      "time_seconds": 12.52,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 298,
+      "time_seconds": 12.52,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 301,
+      "time_seconds": 12.64,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 301,
+      "time_seconds": 12.64,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 306,
+      "time_seconds": 12.85,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 306,
+      "time_seconds": 12.85,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 323,
+      "time_seconds": 13.57,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 325,
+      "time_seconds": 13.65,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 325,
+      "time_seconds": 13.65,
+      "player_id": 0,
+      "action_id": 0,
+      "action_name": "Keep Alive"
+    },
+    {
+      "frame": 330,
+      "time_seconds": 13.86,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 46593,
+      "target_y": 44
+    },
+    {
+      "frame": 337,
+      "time_seconds": 14.15,
+      "player_id": 0,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 47108,
+      "target_y": 44
+    },
+    {
+      "frame": 339,
+      "time_seconds": 14.24,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 339,
+      "time_seconds": 14.24,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 341,
+      "time_seconds": 14.32,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 341,
+      "time_seconds": 14.32,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 343,
+      "time_seconds": 14.41,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 343,
+      "time_seconds": 14.41,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 348,
+      "time_seconds": 14.62,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 348,
+      "time_seconds": 14.62,
+      "player_id": 0,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 351,
+      "time_seconds": 14.74,
+      "player_id": 0,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 352,
+      "time_seconds": 14.78,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 354,
+      "time_seconds": 14.87,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 354,
+      "time_seconds": 14.87,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 356,
+      "time_seconds": 14.95,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 359,
+      "time_seconds": 15.08,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 359,
+      "time_seconds": 15.08,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 361,
+      "time_seconds": 15.16,
+      "player_id": 0,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 363,
+      "time_seconds": 15.25,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 365,
+      "time_seconds": 15.33,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 365,
+      "time_seconds": 15.33,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 366,
+      "time_seconds": 15.37,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 369,
+      "time_seconds": 15.5,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 369,
+      "time_seconds": 15.5,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 370,
+      "time_seconds": 15.54,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 372,
+      "time_seconds": 15.62,
+      "player_id": 0,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 374,
+      "time_seconds": 15.71,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 378,
+      "time_seconds": 15.88,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 378,
+      "time_seconds": 15.88,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 391,
+      "time_seconds": 16.42,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 391,
+      "time_seconds": 16.42,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 395,
+      "time_seconds": 16.59,
+      "player_id": 0,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 46853,
+      "target_y": 44
+    },
+    {
+      "frame": 400,
+      "time_seconds": 16.8,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 400,
+      "time_seconds": 16.8,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 402,
+      "time_seconds": 16.88,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 402,
+      "time_seconds": 16.88,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 403,
+      "time_seconds": 16.93,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 48642,
+      "target_y": 44
+    },
+    {
+      "frame": 404,
+      "time_seconds": 16.97,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 404,
+      "time_seconds": 16.97,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 406,
+      "time_seconds": 17.05,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 406,
+      "time_seconds": 17.05,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 406,
+      "time_seconds": 17.05,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 406,
+      "time_seconds": 17.05,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 407,
+      "time_seconds": 17.09,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 407,
+      "time_seconds": 17.09,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 407,
+      "time_seconds": 17.09,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 407,
+      "time_seconds": 17.09,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 408,
+      "time_seconds": 17.14,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 49154,
+      "target_y": 44
+    },
+    {
+      "frame": 409,
+      "time_seconds": 17.18,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 409,
+      "time_seconds": 17.18,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 411,
+      "time_seconds": 17.26,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 411,
+      "time_seconds": 17.26,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 411,
+      "time_seconds": 17.26,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 411,
+      "time_seconds": 17.26,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 412,
+      "time_seconds": 17.3,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 412,
+      "time_seconds": 17.3,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 413,
+      "time_seconds": 17.35,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 413,
+      "time_seconds": 17.35,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 416,
+      "time_seconds": 17.47,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 416,
+      "time_seconds": 17.47,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 417,
+      "time_seconds": 17.51,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 417,
+      "time_seconds": 17.51,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 417,
+      "time_seconds": 17.51,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 49154,
+      "target_y": 44
+    },
+    {
+      "frame": 420,
+      "time_seconds": 17.64,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 420,
+      "time_seconds": 17.64,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 422,
+      "time_seconds": 17.72,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 422,
+      "time_seconds": 17.72,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 422,
+      "time_seconds": 17.72,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 49155,
+      "target_y": 44
+    },
+    {
+      "frame": 424,
+      "time_seconds": 17.81,
+      "player_id": 0,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 46853,
+      "target_y": 44
+    },
+    {
+      "frame": 425,
+      "time_seconds": 17.85,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 425,
+      "time_seconds": 17.85,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 426,
+      "time_seconds": 17.89,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 426,
+      "time_seconds": 17.89,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 429,
+      "time_seconds": 18.02,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 429,
+      "time_seconds": 18.02,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 430,
+      "time_seconds": 18.06,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 430,
+      "time_seconds": 18.06,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 433,
+      "time_seconds": 18.19,
+      "player_id": 1,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 49409,
+      "target_y": 44
+    },
+    {
+      "frame": 434,
+      "time_seconds": 18.23,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 434,
+      "time_seconds": 18.23,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 434,
+      "time_seconds": 18.23,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 434,
+      "time_seconds": 18.23,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 438,
+      "time_seconds": 18.4,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 438,
+      "time_seconds": 18.4,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 439,
+      "time_seconds": 18.44,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 439,
+      "time_seconds": 18.44,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 440,
+      "time_seconds": 18.48,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 440,
+      "time_seconds": 18.48,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 441,
+      "time_seconds": 18.52,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 441,
+      "time_seconds": 18.52,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 443,
+      "time_seconds": 18.61,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 443,
+      "time_seconds": 18.61,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 444,
+      "time_seconds": 18.65,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 444,
+      "time_seconds": 18.65,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 445,
+      "time_seconds": 18.69,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 445,
+      "time_seconds": 18.69,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 447,
+      "time_seconds": 18.77,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 447,
+      "time_seconds": 18.77,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 448,
+      "time_seconds": 18.82,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 448,
+      "time_seconds": 18.82,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 448,
+      "time_seconds": 18.82,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 448,
+      "time_seconds": 18.82,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 450,
+      "time_seconds": 18.9,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 450,
+      "time_seconds": 18.9,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 463,
+      "time_seconds": 19.45,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 463,
+      "time_seconds": 19.45,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 465,
+      "time_seconds": 19.53,
+      "player_id": 0,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 46853,
+      "target_y": 44
+    },
+    {
+      "frame": 467,
+      "time_seconds": 19.61,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 467,
+      "time_seconds": 19.61,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 468,
+      "time_seconds": 19.66,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 468,
+      "time_seconds": 19.66,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 471,
+      "time_seconds": 19.78,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 471,
+      "time_seconds": 19.78,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 471,
+      "time_seconds": 19.78,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 471,
+      "time_seconds": 19.78,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 471,
+      "time_seconds": 19.78,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 471,
+      "time_seconds": 19.78,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 473,
+      "time_seconds": 19.87,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 473,
+      "time_seconds": 19.87,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 475,
+      "time_seconds": 19.95,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 475,
+      "time_seconds": 19.95,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 475,
+      "time_seconds": 19.95,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 475,
+      "time_seconds": 19.95,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 476,
+      "time_seconds": 19.99,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 476,
+      "time_seconds": 19.99,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 477,
+      "time_seconds": 20.03,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 477,
+      "time_seconds": 20.03,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 478,
+      "time_seconds": 20.08,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 478,
+      "time_seconds": 20.08,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 481,
+      "time_seconds": 20.2,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 484,
+      "time_seconds": 20.33,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 485,
+      "time_seconds": 20.37,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 485,
+      "time_seconds": 20.37,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 488,
+      "time_seconds": 20.5,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 488,
+      "time_seconds": 20.5,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 495,
+      "time_seconds": 20.79,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 495,
+      "time_seconds": 20.79,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 498,
+      "time_seconds": 20.92,
+      "player_id": 0,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 46853,
+      "target_y": 44
+    },
+    {
+      "frame": 501,
+      "time_seconds": 21.04,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 501,
+      "time_seconds": 21.04,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 503,
+      "time_seconds": 21.13,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 503,
+      "time_seconds": 21.13,
+      "player_id": 0,
+      "action_id": 0,
+      "action_name": "Keep Alive"
+    },
+    {
+      "frame": 506,
+      "time_seconds": 21.25,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 506,
+      "time_seconds": 21.25,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 506,
+      "time_seconds": 21.25,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 506,
+      "time_seconds": 21.25,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 510,
+      "time_seconds": 21.42,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 511,
+      "time_seconds": 21.46,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 511,
+      "time_seconds": 21.46,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 513,
+      "time_seconds": 21.55,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 516,
+      "time_seconds": 21.67,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 516,
+      "time_seconds": 21.67,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 517,
+      "time_seconds": 21.71,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 521,
+      "time_seconds": 21.88,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 521,
+      "time_seconds": 21.88,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 522,
+      "time_seconds": 21.92,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 525,
+      "time_seconds": 22.05,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 530,
+      "time_seconds": 22.26,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 530,
+      "time_seconds": 22.26,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 536,
+      "time_seconds": 22.51,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 536,
+      "time_seconds": 22.51,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 541,
+      "time_seconds": 22.72,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 544,
+      "time_seconds": 22.85,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 544,
+      "time_seconds": 22.85,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 561,
+      "time_seconds": 23.56,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 48898,
+      "target_y": 44
+    },
+    {
+      "frame": 561,
+      "time_seconds": 23.56,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 561,
+      "time_seconds": 23.56,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 562,
+      "time_seconds": 23.6,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 562,
+      "time_seconds": 23.6,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 566,
+      "time_seconds": 23.77,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 49154,
+      "target_y": 44
+    },
+    {
+      "frame": 566,
+      "time_seconds": 23.77,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 566,
+      "time_seconds": 23.77,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 567,
+      "time_seconds": 23.81,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 567,
+      "time_seconds": 23.81,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 570,
+      "time_seconds": 23.94,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 49154,
+      "target_y": 44
+    },
+    {
+      "frame": 571,
+      "time_seconds": 23.98,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 571,
+      "time_seconds": 23.98,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 572,
+      "time_seconds": 24.02,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 572,
+      "time_seconds": 24.02,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 575,
+      "time_seconds": 24.15,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 48386,
+      "target_y": 44
+    },
+    {
+      "frame": 575,
+      "time_seconds": 24.15,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 575,
+      "time_seconds": 24.15,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 577,
+      "time_seconds": 24.23,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 577,
+      "time_seconds": 24.23,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 577,
+      "time_seconds": 24.23,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 577,
+      "time_seconds": 24.23,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 580,
+      "time_seconds": 24.36,
+      "player_id": 1,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 48387,
+      "target_y": 44
+    },
+    {
+      "frame": 581,
+      "time_seconds": 24.4,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 581,
+      "time_seconds": 24.4,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 582,
+      "time_seconds": 24.44,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 582,
+      "time_seconds": 24.44,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 584,
+      "time_seconds": 24.53,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 584,
+      "time_seconds": 24.53,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 585,
+      "time_seconds": 24.57,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 585,
+      "time_seconds": 24.57,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 585,
+      "time_seconds": 24.57,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 585,
+      "time_seconds": 24.57,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 585,
+      "time_seconds": 24.57,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 585,
+      "time_seconds": 24.57,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 588,
+      "time_seconds": 24.7,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 588,
+      "time_seconds": 24.7,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 588,
+      "time_seconds": 24.7,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 588,
+      "time_seconds": 24.7,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 590,
+      "time_seconds": 24.78,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 590,
+      "time_seconds": 24.78,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 591,
+      "time_seconds": 24.82,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 591,
+      "time_seconds": 24.82,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 592,
+      "time_seconds": 24.86,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 592,
+      "time_seconds": 24.86,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 594,
+      "time_seconds": 24.95,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 594,
+      "time_seconds": 24.95,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 596,
+      "time_seconds": 25.03,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 596,
+      "time_seconds": 25.03,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 597,
+      "time_seconds": 25.07,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 598,
+      "time_seconds": 25.12,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 598,
+      "time_seconds": 25.12,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 600,
+      "time_seconds": 25.2,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 600,
+      "time_seconds": 25.2,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 601,
+      "time_seconds": 25.24,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 601,
+      "time_seconds": 25.24,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 601,
+      "time_seconds": 25.24,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 605,
+      "time_seconds": 25.41,
+      "player_id": 0,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 606,
+      "time_seconds": 25.45,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 610,
+      "time_seconds": 25.62,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 610,
+      "time_seconds": 25.62,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 611,
+      "time_seconds": 25.66,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 614,
+      "time_seconds": 25.79,
+      "player_id": 0,
+      "action_id": 100,
+      "action_name": "Targeted Order (Remaster2)",
+      "target_x": 47108,
+      "target_y": 44
+    },
+    {
+      "frame": 615,
+      "time_seconds": 25.83,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 615,
+      "time_seconds": 25.83,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 617,
+      "time_seconds": 25.91,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 617,
+      "time_seconds": 25.91,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 619,
+      "time_seconds": 26.0,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 619,
+      "time_seconds": 26.0,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 620,
+      "time_seconds": 26.04,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 620,
+      "time_seconds": 26.04,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 622,
+      "time_seconds": 26.12,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 622,
+      "time_seconds": 26.12,
+      "player_id": 0,
+      "action_id": 0,
+      "action_name": "Keep Alive"
+    },
+    {
+      "frame": 624,
+      "time_seconds": 26.21,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 624,
+      "time_seconds": 26.21,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 627,
+      "time_seconds": 26.33,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 631,
+      "time_seconds": 26.5,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 632,
+      "time_seconds": 26.54,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 632,
+      "time_seconds": 26.54,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 632,
+      "time_seconds": 26.54,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 632,
+      "time_seconds": 26.54,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 636,
+      "time_seconds": 26.71,
+      "player_id": 0,
+      "action_id": 99,
+      "action_name": "Right Click (Remaster2)",
+      "target_x": 46853,
+      "target_y": 44
+    },
+    {
+      "frame": 638,
+      "time_seconds": 26.8,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 638,
+      "time_seconds": 26.8,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 640,
+      "time_seconds": 26.88,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 640,
+      "time_seconds": 26.88,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 642,
+      "time_seconds": 26.96,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 642,
+      "time_seconds": 26.96,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 643,
+      "time_seconds": 27.01,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 643,
+      "time_seconds": 27.01,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 645,
+      "time_seconds": 27.09,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 645,
+      "time_seconds": 27.09,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 647,
+      "time_seconds": 27.17,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 647,
+      "time_seconds": 27.17,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 649,
+      "time_seconds": 27.26,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 649,
+      "time_seconds": 27.26,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 651,
+      "time_seconds": 27.34,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 651,
+      "time_seconds": 27.34,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 658,
+      "time_seconds": 27.64,
+      "player_id": 0,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 658,
+      "time_seconds": 27.64,
+      "player_id": 1,
+      "action_id": 2,
+      "action_name": "Load Game"
+    },
+    {
+      "frame": 667,
+      "time_seconds": 28.01,
+      "player_id": 0,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 667,
+      "time_seconds": 28.01,
+      "player_id": 0,
+      "action_id": 0,
+      "action_name": "Keep Alive"
+    },
+    {
+      "frame": 672,
+      "time_seconds": 28.22,
+      "player_id": 1,
+      "action_id": 30,
+      "action_name": "Siege"
+    },
+    {
+      "frame": 675,
+      "time_seconds": 28.35,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 675,
+      "time_seconds": 28.35,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 681,
+      "time_seconds": 28.6,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 696,
+      "time_seconds": 29.23,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 696,
+      "time_seconds": 29.23,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 700,
+      "time_seconds": 29.4,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 704,
+      "time_seconds": 29.57,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 704,
+      "time_seconds": 29.57,
+      "player_id": 1,
+      "action_id": 3,
+      "action_name": "Restart Game"
+    },
+    {
+      "frame": 716,
+      "time_seconds": 30.07,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 716,
+      "time_seconds": 30.07,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 718,
+      "time_seconds": 30.16,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    },
+    {
+      "frame": 734,
+      "time_seconds": 30.83,
+      "player_id": 1,
+      "action_id": 19,
+      "action_name": "Stop"
+    },
+    {
+      "frame": 734,
+      "time_seconds": 30.83,
+      "player_id": 1,
+      "action_id": 1,
+      "action_name": "Save Game"
+    },
+    {
+      "frame": 736,
+      "time_seconds": 30.91,
+      "player_id": 1,
+      "action_id": 31,
+      "action_name": "Train Fighter"
+    }
+  ],
+  "total_commands_count": 15798
+}

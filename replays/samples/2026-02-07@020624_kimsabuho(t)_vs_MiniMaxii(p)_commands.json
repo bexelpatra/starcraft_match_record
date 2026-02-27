@@ -16142,9 +16142,7 @@
     "time_seconds": 199.83,
     "player_id": 1,
     "action_id": 7,
-    "action_name": "Build",
-    "unit": "Guardian",
-    "unit_id": 44
+    "action_name": "Build"
   },
   {
     "frame": 4762,
@@ -23017,9 +23015,7 @@
     "time_seconds": 282.78,
     "player_id": 1,
     "action_id": 7,
-    "action_name": "Build",
-    "unit": "Unit_1239",
-    "unit_id": 1239
+    "action_name": "Build"
   },
   {
     "frame": 6733,
@@ -24355,9 +24351,7 @@
     "time_seconds": 296.47,
     "player_id": 1,
     "action_id": 7,
-    "action_name": "Build",
-    "unit": "Unit_1260",
-    "unit_id": 1260
+    "action_name": "Build"
   },
   {
     "frame": 7059,
@@ -28355,9 +28349,7 @@
     "time_seconds": 350.94,
     "player_id": 1,
     "action_id": 7,
-    "action_name": "Build",
-    "unit": "Guardian",
-    "unit_id": 44
+    "action_name": "Build"
   },
   {
     "frame": 8364,

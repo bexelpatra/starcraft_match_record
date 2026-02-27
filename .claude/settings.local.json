@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "MultiEdit",
+      "Write",
+      "Glob",
+      "Grep",
+      "LS",
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(pnpm:*)",
+      "Bash(yarn:*)",
+      "Bash(node:*)",
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(echo:*)",
+      "Bash(cd:*)",
+      "Bash(python:*)",
+      "Bash(pip:*)",
+      "WebFetch",
+      "WebSearch",
+      "TodoWrite",
+      "Bash(git -C D:/pypy/star_record push origin main)"
+    ],
+    "deny": [
+      "Bash(rm:*)",
+      "Bash(rm -rf:*)",
+      "Bash(sudo rm:*)",
+      "Bash(del:*)",
+      "Bash(rmdir:*)",
+      "DeleteFile"
+    ]
+  }
+}

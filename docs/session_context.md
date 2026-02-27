@@ -41,31 +41,37 @@ players:
 
 games:
   id=1 YB_Scan vs awdfzxvczvccv12  | 승자 미확정 | my_result=unknown
-  id=2 kimsabuho vs MiniMaxii      | kimsabuho 승 | my_result=unknown ← 버그 (아래 참조)
+  id=2 kimsabuho vs MiniMaxii      | kimsabuho 승 | my_result=win ← 소급 갱신 완료
 ```
 
-### 알려진 버그
-- game 2의 `my_result`가 `unknown`으로 저장됨.
-- 원인: `import` 실행 시점에 kimsabuho가 아직 `is_me`로 등록되기 전이었음.
-- `import` → 자동 추론 실패 (2명이 동률) → `set-name kimsabuho` 수동 등록.
-- 이미 저장된 게임의 `my_result`는 소급 갱신되지 않음.
-- **수정 필요**: `set-name` 시 기존 게임의 `my_result`를 재계산하는 로직 추가,
-  또는 `import` 후 `my_result` 재계산 명령어 추가.
+### 해결된 버그
+- ~~set-name 후 기존 게임 my_result 소급 미갱신~~ → `recalculate_my_results()` 추가로 해결
+- ~~config.json에 starcraft_path 키 누락~~ → load() 시 DEFAULTS에서 자동 병합
+- ~~콘솔 한글 깨짐~~ → main.py에서 `chcp 65001` + `sys.stdout` UTF-8 래핑
 
 ---
 
 ## 4. 아직 안 한 것 (Phase 2 + 잔여 작업)
 
 ### 즉시 할 수 있는 개선
-- [ ] `set-name` 시 기존 게임 `my_result` 소급 갱신
-- [ ] config.json에 `starcraft_path` 기본값이 빠져있음 (현재 config.json에 키 없음)
 - [ ] PyInstaller로 exe 패키징 테스트
-- [ ] 실제 스타크래프트 리플레이 폴더로 watch/daemon 실전 테스트
-- [ ] 콘솔 한글 깨짐 대응 (Windows cmd UTF-8 설정)
+- [ ] 실제 스타크래프트 리플레이 폴더로 watch/daemon 실전 테스트 (docs/test_scenarios.md 참조)
 
 ### Phase 2 (추후 기능)
+- [ ] 오버레이 UI (게임 위에 표시, tkinter TOPMOST 방식 - POC 테스트 완료)
+  - [ ] 오버레이에 최근 전적/맵/날짜 등 상세 정보 표시
+  - [ ] 오버레이 표시 위치/크기/지속시간 사용자 설정 가능하게
+  - [ ] notifier.py에 오버레이 방식 추가 (toast/overlay 선택 가능)
+- [ ] 플레이어 메모 기능
+  - [ ] DB에 player_memos 테이블 추가
+  - [ ] CLI에서 메모 작성/조회 명령어
+  - [ ] 오버레이에 상대 메모 표시
+- [ ] 인게임 채팅 커맨드 (실시간 리플레이 읽기)
+  - [ ] 게임 중 리플레이 파일 실시간 읽기 가능 여부 조사
+  - [ ] 채팅 커맨드 파싱 (/info, /memo, /record 등)
+  - [ ] 커맨드 감지 시 오버레이로 응답 표시
+  - [ ] 커맨드로 플레이어 메모 실시간 작성
 - [ ] 메모리 읽기로 로비 단계 상대 감지 (pymem)
-- [ ] 오버레이 UI (게임 위에 표시)
 - [ ] 계정-ID 매핑 (수동 alias는 구현됨, 메모리 기반은 미구현)
 - [ ] 원격 DB 연동
 - [ ] 통계 대시보드 (웹 또는 GUI)
