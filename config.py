@@ -15,6 +15,7 @@ DEFAULTS = {
     "auto_detect_me": True,
     "watch_interval_seconds": 2,
     "notify_on_new_game": True,
+    "notify_mode": "toast",
 }
 
 

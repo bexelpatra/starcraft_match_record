@@ -14,16 +14,24 @@
 """
 
 import argparse
+import io
 import logging
+import os
 import sys
 from pathlib import Path
+
+# Windows 콘솔 한글 깨짐 방지: UTF-8 코드페이지 설정
+if sys.platform == "win32":
+    os.system("chcp 65001 >nul 2>&1")
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 sys.path.insert(0, str(Path(__file__).parent))
 
 import config
 from db import Database
 from record_manager import RecordManager
-from notifier import show_toast
+from notifier import notify
 
 log = logging.getLogger("star_record")
 
@@ -68,7 +76,16 @@ def make_replay_callback(manager: RecordManager, cfg: dict):
         print(f"\n{detail}\n")
 
         if cfg.get("notify_on_new_game", True):
-            show_toast("StarRecord - 전적 알림", short)
+            # overlay용 상대 정보 구성
+            opp_race = game_data.get("loser_race") if winner in my_names \
+                else game_data.get("winner_race")
+            opponents = [{
+                "name": opponent,
+                "race": opp_race or "?",
+                "record": f"{record['wins']}승 {record['losses']}패",
+            }]
+            notify("StarRecord - 전적 알림", short,
+                   opponents=opponents, cfg=cfg)
 
     return on_new_replay
 
@@ -154,10 +171,10 @@ def cmd_daemon(manager: RecordManager, cfg: dict):
     callback = make_replay_callback(manager, cfg)
 
     def on_sc_start():
-        show_toast("StarRecord", "스타크래프트 감지! 리플레이 감시를 시작합니다.")
+        notify("StarRecord", "스타크래프트 감지! 리플레이 감시를 시작합니다.", cfg=cfg)
 
     def on_sc_stop():
-        show_toast("StarRecord", "스타크래프트 종료. 리플레이 감시를 중지합니다.")
+        notify("StarRecord", "스타크래프트 종료. 리플레이 감시를 중지합니다.", cfg=cfg)
 
     daemon_mode(replay_dir, callback, on_sc_start, on_sc_stop)
 
@@ -190,6 +207,11 @@ def cmd_set_name(args, manager: RecordManager, cfg: dict):
     manager.db.set_player_is_me(name, True)
     config.add_my_name(cfg, name)
     print(f"본인 닉네임 등록: {name}")
+
+    # 기존 게임의 my_result를 소급 갱신
+    updated = manager.db.recalculate_my_results()
+    if updated > 0:
+        print(f"기존 게임 {updated}건의 승패 결과를 갱신했습니다.")
 
 
 def cmd_set_sc_path(args, cfg: dict):
