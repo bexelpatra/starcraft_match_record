@@ -7,5 +7,6 @@
   ],
   "auto_detect_me": true,
   "watch_interval_seconds": 2,
-  "notify_on_new_game": true
+  "notify_on_new_game": true,
+  "notify_mode": "overlay"
 }
