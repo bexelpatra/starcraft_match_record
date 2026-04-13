@@ -1,7 +1,7 @@
-"""LastReplay.rep 파일 크기 변화 감지 → 알림 테스트.
+"""LastReplay.rep 파일 크기 변화 감지 → 헤더 파싱 → overlay 통합 테스트.
 
-새 게임이 시작되면 스타크래프트가 LastReplay.rep을 업데이트하므로
-파일 크기가 변경되는 시점을 감지해 알림을 띄운다.
+새 게임이 시작되면 스타크래프트가 LastReplay.rep을 처음부터 써서
+파일 크기가 줄어든다. 이 시점을 감지해 헤더를 파싱하고 overlay를 띄운다.
 
 사용법:
     python _test_lastreplay_watch.py
@@ -22,56 +22,114 @@ if sys.platform == "win32":
 sys.path.insert(0, str(Path(__file__).parent))
 
 import config
-from notifier import notify
+from watcher import LastReplayWatcher
+from db import Database
+from record_manager import RecordManager
 
-# 감시 대상 파일
-REPLAY_PATH = Path(r"C:\Users\jaisung choi\Documents\StarCraft\Maps\Replays\LastReplay.rep")
 
-# 폴링 주기 (초)
-POLL_INTERVAL = 2
+def make_test_callback(manager: RecordManager, cfg: dict):
+    """테스트용 게임 시작 콜백."""
+    from sc_replay_parser import SCReplayParser
+    from notifier import notify
+
+    def on_game_start(replay_path: Path):
+        print(f"\n[게임 시작 감지] {replay_path.name}")
+        print(f"  파일 크기: {replay_path.stat().st_size:,} bytes")
+
+        # 헤더 파싱
+        try:
+            parser = SCReplayParser(str(replay_path))
+            parser.parse_header_only()
+            players = parser.players
+            print(f"  플레이어: {[p['name'] for p in players]}")
+        except Exception as e:
+            print(f"  파싱 실패: {e}")
+            players = []
+
+        my_names = manager.my_names
+        opponents_info = []
+
+        for p in players:
+            record = manager.get_record(p["name"])
+            wins = record.get("wins", 0)
+            losses = record.get("losses", 0)
+            total = record.get("total", 0)
+            record_str = "첫 대전" if total == 0 else f"{wins}승 {losses}패"
+            is_me = "★ 나" if p["name"] in my_names else ""
+            print(f"  - {p['name']} ({p.get('race','?')}) {record_str} {is_me}")
+            if p["name"] not in my_names:
+                opponents_info.append({
+                    "name": p["name"],
+                    "race": p.get("race", "?"),
+                    "record": record_str,
+                })
+
+        # my_names 미설정시 전체 표시
+        if not opponents_info:
+            for p in players:
+                record = manager.get_record(p["name"])
+                wins = record.get("wins", 0)
+                losses = record.get("losses", 0)
+                total = record.get("total", 0)
+                record_str = "첫 대전" if total == 0 else f"{wins}승 {losses}패"
+                opponents_info.append({
+                    "name": p["name"],
+                    "race": p.get("race", "?"),
+                    "record": record_str,
+                })
+
+        if opponents_info:
+            notify(
+                "StarRecord - 게임 시작",
+                "",
+                opponents=opponents_info,
+                cfg={**cfg, "notify_mode": "overlay"},
+            )
+
+    return on_game_start
 
 
 def main():
     cfg = config.load()
-    print(f"감시 대상: {REPLAY_PATH}")
+    db_path = config.get_db_path(cfg)
+    db = Database(db_path)
+    manager = RecordManager(db, my_names=cfg.get("my_names", []))
 
-    if not REPLAY_PATH.exists():
-        print(f"[오류] 파일을 찾을 수 없습니다: {REPLAY_PATH}")
+    # LastReplay.rep 경로 탐색
+    replay_path = config.get_last_replay_path(cfg)
+    if not replay_path:
+        print("[오류] LastReplay.rep 파일을 찾을 수 없습니다.")
         print("스타크래프트를 한 번 실행해 LastReplay.rep 파일을 생성해주세요.")
+        print('또는 config.json에 "last_replay_path"를 직접 설정해주세요.')
         return
 
-    prev_size = REPLAY_PATH.stat().st_size
-    print(f"초기 파일 크기: {prev_size:,} bytes")
-    print(f"{POLL_INTERVAL}초 간격으로 감시 중... (Ctrl+C로 종료)\n")
+    print(f"감시 대상: {replay_path}")
+    print(f"초기 파일 크기: {replay_path.stat().st_size:,} bytes")
+    print(f"본인 닉네임: {manager.my_names or '(미설정)'}")
+    print(f"1초 간격으로 감시 중... (Ctrl+C로 종료)")
+    print("스타크래프트에서 게임을 시작하면 overlay가 표시됩니다.\n")
+
+    callback = make_test_callback(manager, cfg)
+    watcher = LastReplayWatcher(replay_path, callback)
+    watcher.start()
 
     try:
+        prev_size = replay_path.stat().st_size
         while True:
-            time.sleep(POLL_INTERVAL)
-
+            time.sleep(2)
             try:
-                cur_size = REPLAY_PATH.stat().st_size
-            except OSError as e:
-                print(f"[경고] 파일 접근 실패: {e}")
-                continue
-
-            if cur_size != prev_size:
-                diff = cur_size - prev_size
-                sign = "+" if diff > 0 else ""
-                print(f"[변화 감지] {prev_size:,} → {cur_size:,} bytes ({sign}{diff:,})")
-
-                notify(
-                    "StarRecord - 변화 감지",
-                    f"LastReplay.rep 크기 변경: {sign}{diff:,} bytes",
-                    opponents=[{"name": "테스트 상대", "race": "T", "record": "알림 동작 확인"}],
-                    cfg=cfg,
-                )
-
-                prev_size = cur_size
-            else:
-                print(f"  변화 없음: {cur_size:,} bytes")
-
+                cur_size = replay_path.stat().st_size
+                if cur_size != prev_size:
+                    diff = cur_size - prev_size
+                    sign = "+" if diff > 0 else ""
+                    print(f"  크기 변화: {prev_size:,} → {cur_size:,} ({sign}{diff:,} bytes)")
+                    prev_size = cur_size
+            except OSError:
+                pass
     except KeyboardInterrupt:
-        print("\n감시 종료.")
+        print("\n\n감시 종료.")
+    finally:
+        watcher.stop()
 
 
 if __name__ == "__main__":

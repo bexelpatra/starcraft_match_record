@@ -16,6 +16,8 @@ DEFAULTS = {
     "watch_interval_seconds": 2,
     "notify_on_new_game": True,
     "notify_mode": "toast",
+    "last_replay_path": "",      # LastReplay.rep 절대 경로 (비어있으면 자동 탐색)
+    "game_start_overlay": True,  # 게임 시작 시 overlay 표시 여부
 }
 
 
@@ -60,3 +62,34 @@ def add_my_name(cfg: dict, name: str, config_path: Path = DEFAULT_CONFIG_PATH) -
         cfg["my_names"] = names
         save(cfg, config_path)
     return cfg
+
+
+# LastReplay.rep 탐색 경로 (우선순위 순)
+_LAST_REPLAY_CANDIDATES = [
+    Path.home() / "Documents" / "StarCraft" / "Maps" / "Replays" / "LastReplay.rep",
+    Path("C:/Users") / Path.home().name / "Documents" / "StarCraft" / "Maps" / "Replays" / "LastReplay.rep",
+    Path("C:/Program Files (x86)/StarCraft/Maps/Replays/LastReplay.rep"),
+]
+
+
+def get_last_replay_path(cfg: dict) -> Path | None:
+    """LastReplay.rep 경로를 반환한다. 설정에 있으면 그것을, 없으면 자동 탐색."""
+    explicit = cfg.get("last_replay_path", "")
+    if explicit:
+        p = Path(explicit)
+        if p.exists():
+            return p
+
+    # replay_dir 기반 탐색
+    replay_dir = cfg.get("replay_dir", "")
+    if replay_dir:
+        candidate = Path(replay_dir) / "LastReplay.rep"
+        if candidate.exists():
+            return candidate
+
+    # 일반적인 경로 탐색
+    for candidate in _LAST_REPLAY_CANDIDATES:
+        if candidate.exists():
+            return candidate
+
+    return None

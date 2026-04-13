@@ -236,6 +236,42 @@ class SCReplayParser:
 
         return self
 
+    def parse_header_only(self):
+        """플레이어 정보만 빠르게 파싱한다. 게임 시작 직후 overlay용.
+
+        전체 parse()와 달리 첫 번째 zlib 블록만 압축 해제하므로
+        파일이 완전히 기록되지 않은 상태에서도 동작한다.
+
+        Returns:
+            self (players, game_info['game_type'] 등 부분적으로 채워진 상태)
+        """
+        try:
+            with open(self.filepath, 'rb') as f:
+                self.data = f.read()
+        except OSError as e:
+            raise ValueError(f"파일을 읽을 수 없습니다: {e}") from e
+
+        if len(self.data) < 32:
+            raise ValueError("파일이 너무 작습니다 (헤더 불완전)")
+
+        # 파일 헤더 검증 (magic 체크 없이 관대하게)
+        try:
+            self._parse_file_header()
+        except ValueError:
+            # magic이 다를 수 있음 (게임 중에는 아직 미완성일 수 있음)
+            pass
+
+        # zlib 블록 탐색
+        self._find_zlib_blocks()
+
+        if not self.zlib_blocks:
+            raise ValueError("zlib 블록을 찾을 수 없습니다 (파일이 아직 기록 중일 수 있음)")
+
+        # 블록 0만 파싱 (game info + player names)
+        self._parse_game_info()
+
+        return self
+
     def _parse_file_header(self):
         """Parse the file header"""
         if len(self.data) < 32:

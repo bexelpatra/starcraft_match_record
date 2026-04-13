@@ -46,11 +46,79 @@ def setup_logging(verbose: bool = False):
 
 
 # ── 콜백 팩토리 ─────────────────────────────────────────────
+def make_game_start_callback(manager: RecordManager, cfg: dict):
+    """게임 시작(LastReplay.rep 크기 변화) 시 호출되는 콜백을 생성한다."""
+    from sc_replay_parser import SCReplayParser
+
+    def on_game_start(replay_path):
+        """LastReplay.rep 헤더를 파싱해 상대방 전적을 overlay로 표시한다."""
+        if not cfg.get("game_start_overlay", True):
+            return
+
+        # 헤더만 빠르게 파싱
+        try:
+            parser = SCReplayParser(str(replay_path))
+            parser.parse_header_only()
+        except Exception as e:
+            log.warning("게임 시작 헤더 파싱 실패: %s", e)
+            return
+
+        players = parser.players
+        if not players:
+            log.debug("플레이어 정보 없음, overlay 스킵")
+            return
+
+        my_names = manager.my_names
+
+        # 나의 닉네임이 아닌 상대방만 추출
+        opponents_info = []
+        for p in players:
+            if p["name"] not in my_names:
+                record = manager.get_record(p["name"])
+                wins = record.get("wins", 0)
+                losses = record.get("losses", 0)
+                total = record.get("total", 0)
+                if total == 0:
+                    record_str = "첫 대전"
+                else:
+                    record_str = f"{wins}승 {losses}패"
+
+                opponents_info.append({
+                    "name": p["name"],
+                    "race": p.get("race", "?"),
+                    "record": record_str,
+                })
+
+        if not opponents_info:
+            log.debug("상대방을 특정할 수 없음 (my_names 미설정?)")
+            # 전체 플레이어를 그냥 보여주기
+            for p in players:
+                record = manager.get_record(p["name"])
+                wins = record.get("wins", 0)
+                losses = record.get("losses", 0)
+                total = record.get("total", 0)
+                record_str = "첫 대전" if total == 0 else f"{wins}승 {losses}패"
+                opponents_info.append({
+                    "name": p["name"],
+                    "race": p.get("race", "?"),
+                    "record": record_str,
+                })
+
+        log.info("게임 시작 overlay 표시: %s",
+                 ", ".join(o["name"] for o in opponents_info))
+        from notifier import notify
+        notify("StarRecord - 게임 시작", "",
+               opponents=opponents_info, cfg={**cfg, "notify_mode": "overlay"})
+
+    return on_game_start
+
+
 
 def make_replay_callback(manager: RecordManager, cfg: dict):
     """새 리플레이 감지 시 호출되는 콜백을 생성한다."""
 
     def on_new_replay(replay_path: Path):
+
         game_data = manager.process_replay(replay_path)
         if game_data is None:
             return
@@ -163,12 +231,30 @@ def cmd_launch(manager: RecordManager, cfg: dict):
 def cmd_daemon(manager: RecordManager, cfg: dict):
     """백그라운드에서 스타크래프트 프로세스를 감시한다."""
     from launcher import daemon_mode
+    from watcher import LastReplayWatcher
 
     replay_dir = _resolve_replay_dir(cfg)
     if not replay_dir:
         return
 
+    # LastReplay.rep 경로 탐색
+    last_replay_path = config.get_last_replay_path(cfg)
+    if last_replay_path:
+        print(f"[*] LastReplay.rep 감시 대상: {last_replay_path}")
+    else:
+        print("[!] LastReplay.rep 파일을 찾을 수 없습니다.")
+        print("    스타크래프트를 한 번 실행해 파일을 생성하거나,")
+        print('    config.json에 "last_replay_path"를 직접 설정해주세요.')
+
     callback = make_replay_callback(manager, cfg)
+    game_start_cb = make_game_start_callback(manager, cfg)
+
+    # LastReplayWatcher는 SC 실행 여부와 무관하게 항상 감시
+    last_replay_watcher = None
+    if last_replay_path:
+        last_replay_watcher = LastReplayWatcher(last_replay_path, game_start_cb)
+        last_replay_watcher.start()
+        print("[*] 게임 시작 감지(LastReplay) 감시 시작\n")
 
     def on_sc_start():
         notify("StarRecord", "스타크래프트 감지! 리플레이 감시를 시작합니다.", cfg=cfg)
@@ -176,7 +262,12 @@ def cmd_daemon(manager: RecordManager, cfg: dict):
     def on_sc_stop():
         notify("StarRecord", "스타크래프트 종료. 리플레이 감시를 중지합니다.", cfg=cfg)
 
-    daemon_mode(replay_dir, callback, on_sc_start, on_sc_stop)
+    try:
+        daemon_mode(replay_dir, callback, on_sc_start, on_sc_stop)
+    finally:
+        if last_replay_watcher:
+            last_replay_watcher.stop()
+
 
 
 def cmd_record(args, manager: RecordManager):
