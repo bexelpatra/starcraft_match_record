@@ -208,4 +208,3 @@ class LastReplayWatcher:
             self._on_game_start(self.replay_path)
         except Exception as e:
             log.error("게임 시작 콜백 실패: %s", e, exc_info=True)
-

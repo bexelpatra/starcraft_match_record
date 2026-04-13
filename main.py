@@ -11,6 +11,10 @@
     python main.py set-sc-path <경로>         스타크래프트 실행파일 경로 설정
     python main.py set-replay-dir <경로>      리플레이 폴더 경로 설정
     python main.py alias <원래이름> <별칭>    별칭 등록
+    python main.py memo <상대닉네임>          상대 메모 조회
+    python main.py memo <상대닉네임> add <내용>  메모 추가
+    python main.py memo <상대닉네임> clear     메모 전체 삭제
+    python main.py gui                       GUI 설정 화면 실행
 """
 
 import argparse
@@ -46,6 +50,7 @@ def setup_logging(verbose: bool = False):
 
 
 # ── 콜백 팩토리 ─────────────────────────────────────────────
+
 def make_game_start_callback(manager: RecordManager, cfg: dict):
     """게임 시작(LastReplay.rep 크기 변화) 시 호출되는 콜백을 생성한다."""
     from sc_replay_parser import SCReplayParser
@@ -83,10 +88,12 @@ def make_game_start_callback(manager: RecordManager, cfg: dict):
                 else:
                     record_str = f"{wins}승 {losses}패"
 
+                latest_memo = manager.db.get_latest_memo(p["name"])
                 opponents_info.append({
                     "name": p["name"],
                     "race": p.get("race", "?"),
                     "record": record_str,
+                    "memo": latest_memo,
                 })
 
         if not opponents_info:
@@ -98,20 +105,20 @@ def make_game_start_callback(manager: RecordManager, cfg: dict):
                 losses = record.get("losses", 0)
                 total = record.get("total", 0)
                 record_str = "첫 대전" if total == 0 else f"{wins}승 {losses}패"
+                latest_memo = manager.db.get_latest_memo(p["name"])
                 opponents_info.append({
                     "name": p["name"],
                     "race": p.get("race", "?"),
                     "record": record_str,
+                    "memo": latest_memo,
                 })
 
         log.info("게임 시작 overlay 표시: %s",
                  ", ".join(o["name"] for o in opponents_info))
-        from notifier import notify
         notify("StarRecord - 게임 시작", "",
                opponents=opponents_info, cfg={**cfg, "notify_mode": "overlay"})
 
     return on_game_start
-
 
 
 def make_replay_callback(manager: RecordManager, cfg: dict):
@@ -147,10 +154,13 @@ def make_replay_callback(manager: RecordManager, cfg: dict):
             # overlay용 상대 정보 구성
             opp_race = game_data.get("loser_race") if winner in my_names \
                 else game_data.get("winner_race")
+            # DB에서 상대의 최신 메모 조회
+            latest_memo = manager.db.get_latest_memo(opponent)
             opponents = [{
                 "name": opponent,
                 "race": opp_race or "?",
                 "record": f"{record['wins']}승 {record['losses']}패",
+                "memo": latest_memo,
             }]
             notify("StarRecord - 전적 알림", short,
                    opponents=opponents, cfg=cfg)
@@ -269,7 +279,6 @@ def cmd_daemon(manager: RecordManager, cfg: dict):
             last_replay_watcher.stop()
 
 
-
 def cmd_record(args, manager: RecordManager):
     """특정 상대와의 전적을 출력한다."""
     record = manager.get_record(args.opponent)
@@ -332,6 +341,43 @@ def cmd_alias(args, manager: RecordManager):
     """별칭을 등록한다."""
     manager.db.add_alias(args.player, args.alt)
     print(f"별칭 등록: {args.alt} → {args.player}")
+
+
+def cmd_memo(args, manager: RecordManager):
+    """상대에 대한 메모를 관리한다."""
+    target = args.target
+    action = args.action or "list"
+
+    if action == "list":
+        memos = manager.db.get_memos(target)
+        if not memos:
+            print(f"{target}: 저장된 메모 없음")
+            return
+        print(f"\n{target}의 메모:")
+        for m in memos:
+            created = m["created_at"][:16] if m.get("created_at") else ""
+            print(f"  [{m['id']}] {m['memo']}  ({created})")
+        print()
+
+    elif action == "add":
+        content = " ".join(args.content) if args.content else ""
+        if not content:
+            print("메모 내용을 입력해주세요.")
+            print('  예: python main.py memo PlayerName add "초반 러시 주의"')
+            return
+        memo_id = manager.db.add_memo(target, content)
+        print(f"메모 저장 완료 (id={memo_id}): {content}")
+
+    elif action == "clear":
+        deleted = manager.db.clear_memos(target)
+        print(f"{target}의 메모 {deleted}건 삭제됨")
+
+
+def cmd_gui():
+    """GUI 설정 화면을 실행한다."""
+    from gui import StarRecordGUI
+    app = StarRecordGUI()
+    app.run()
 
 
 # ── 헬퍼 ─────────────────────────────────────────────────────
@@ -397,6 +443,15 @@ def main():
     p_alias.add_argument("player", help="원래 닉네임")
     p_alias.add_argument("alt", help="별칭")
 
+    # memo
+    p_memo = sub.add_parser("memo", help="상대 메모 관리")
+    p_memo.add_argument("target", help="상대 닉네임")
+    p_memo.add_argument("action", nargs="?", default="list", choices=["add", "clear", "list"], help="동작 (기본: list)")
+    p_memo.add_argument("content", nargs="*", help="메모 내용 (add 시)")
+
+    # gui
+    sub.add_parser("gui", help="GUI 설정 화면 실행")
+
     args = parser.parse_args()
     setup_logging(args.verbose)
 
@@ -419,6 +474,8 @@ def main():
         "set-sc-path":    lambda: cmd_set_sc_path(args, cfg),
         "set-replay-dir": lambda: cmd_set_replay_dir(args, cfg),
         "alias":          lambda: cmd_alias(args, manager),
+        "memo":           lambda: cmd_memo(args, manager),
+        "gui":            lambda: cmd_gui(),
     }
 
     handler = commands.get(args.command)

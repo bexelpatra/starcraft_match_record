@@ -58,6 +58,17 @@ CREATE TABLE IF NOT EXISTS chat_messages (
     FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE,
     FOREIGN KEY (player_id) REFERENCES players(id) ON DELETE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS player_memos (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    player_id   INTEGER NOT NULL,
+    memo        TEXT NOT NULL,
+    source_game_id INTEGER,
+    created_at  TEXT DEFAULT (datetime('now', 'localtime')),
+    updated_at  TEXT DEFAULT (datetime('now', 'localtime')),
+    FOREIGN KEY (player_id) REFERENCES players(id) ON DELETE CASCADE,
+    FOREIGN KEY (source_game_id) REFERENCES games(id) ON DELETE SET NULL
+);
 """
 
 
@@ -320,6 +331,70 @@ class Database:
                 "last_played": s["last_played"],
             })
         return result_list
+
+    # ── Memos ────────────────────────────────────────────────
+
+    def add_memo(self, player_name: str, memo: str, game_id: int | None = None) -> int:
+        """플레이어에 대한 메모를 추가한다. memo id를 반환."""
+        resolved = self.resolve_player_name(player_name)
+        player_id = self.get_or_create_player(resolved)
+        with self._connect() as conn:
+            cur = conn.execute(
+                "INSERT INTO player_memos (player_id, memo, source_game_id) VALUES (?, ?, ?)",
+                (player_id, memo, game_id),
+            )
+            return cur.lastrowid
+
+    def get_memos(self, player_name: str) -> list[dict]:
+        """플레이어의 모든 메모를 반환한다.
+        [{id, memo, source_game_id, created_at, updated_at}]"""
+        resolved = self.resolve_player_name(player_name)
+        player_id = self.get_or_create_player(resolved)
+        with self._connect() as conn:
+            rows = conn.execute(
+                """SELECT id, memo, source_game_id, created_at, updated_at
+                   FROM player_memos
+                   WHERE player_id = ?
+                   ORDER BY created_at DESC""",
+                (player_id,),
+            ).fetchall()
+            return [dict(r) for r in rows]
+
+    def get_latest_memo(self, player_name: str) -> str | None:
+        """플레이어의 가장 최근 메모 텍스트를 반환한다. 없으면 None."""
+        resolved = self.resolve_player_name(player_name)
+        player_id = self.get_or_create_player(resolved)
+        with self._connect() as conn:
+            row = conn.execute(
+                """SELECT memo FROM player_memos
+                   WHERE player_id = ?
+                   ORDER BY id DESC LIMIT 1""",
+                (player_id,),
+            ).fetchone()
+            return row["memo"] if row else None
+
+    def clear_memos(self, player_name: str) -> int:
+        """플레이어의 모든 메모를 삭제한다. 삭제된 개수를 반환."""
+        resolved = self.resolve_player_name(player_name)
+        player_id = self.get_or_create_player(resolved)
+        with self._connect() as conn:
+            cur = conn.execute(
+                "DELETE FROM player_memos WHERE player_id = ?",
+                (player_id,),
+            )
+            return cur.rowcount
+
+    def update_memo(self, memo_id: int, new_memo: str) -> None:
+        """특정 메모를 업데이트한다."""
+        with self._connect() as conn:
+            conn.execute(
+                """UPDATE player_memos
+                   SET memo = ?, updated_at = datetime('now', 'localtime')
+                   WHERE id = ?""",
+                (new_memo, memo_id),
+            )
+
+    # ── 통계 ─────────────────────────────────────────────────
 
     def get_player_name_counts(self) -> list[tuple[str, int]]:
         """모든 게임에서 등장한 플레이어 이름별 등장 횟수를 반환한다.

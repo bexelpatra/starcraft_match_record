@@ -13,6 +13,10 @@ log = logging.getLogger(__name__)
 # 파일명에서 날짜를 추출하는 패턴: 2026-02-07@020624
 DATE_PATTERN = re.compile(r"(\d{4}-\d{2}-\d{2})@(\d{6})")
 
+# 채팅 메모 명령어 접두사
+MEMO_PREFIX = "!memo"
+MEMO_CLEAR = "!memo clear"
+
 
 class RecordManager:
     """리플레이 파싱, DB 저장, 전적 조회를 통합 관리한다."""
@@ -51,6 +55,7 @@ class RecordManager:
 
         self._save_players(game_id, parser)
         self._save_chat(game_id, parser)
+        self._process_chat_memos(game_id, parser)
 
         log.info("저장 완료: %s", replay_file)
         return game_data
@@ -204,6 +209,51 @@ class RecordManager:
                 game_id, player_id,
                 msg["message"], msg.get("time", ""), msg.get("frame", 0),
             )
+
+    def _process_chat_memos(self, game_id: int, parser: SCReplayParser) -> None:
+        """리플레이 채팅에서 메모 명령어를 감지하여 DB에 저장한다."""
+        if not self.my_names:
+            return
+
+        # 상대 이름 결정: 2인 게임에서 본인이 아닌 플레이어
+        opponents = [
+            p["name"] for p in parser.players
+            if p["name"] not in self.my_names
+        ]
+        if not opponents:
+            log.debug("상대 플레이어를 찾을 수 없음 (game_id=%d)", game_id)
+            return
+
+        opponent_name = opponents[0]
+
+        for msg in parser.chat_messages:
+            # 본인 채팅만 처리
+            if msg["player_name"] not in self.my_names:
+                continue
+
+            message = msg["message"]
+
+            # !memo clear 처리
+            if message.strip().lower() == MEMO_CLEAR.lower():
+                deleted = self.db.clear_memos(opponent_name)
+                log.info(
+                    "메모 초기화: %s (삭제 %d건, game_id=%d)",
+                    opponent_name, deleted, game_id,
+                )
+                continue
+
+            # !memo <내용> 처리
+            if message.strip().lower().startswith(MEMO_PREFIX.lower()):
+                memo_text = message.strip()[len(MEMO_PREFIX):].strip()
+                if not memo_text:
+                    log.debug("빈 메모 무시 (game_id=%d)", game_id)
+                    continue
+
+                memo_id = self.db.add_memo(opponent_name, memo_text, game_id)
+                log.info(
+                    "메모 저장: %s - '%s' (memo_id=%d, game_id=%d)",
+                    opponent_name, memo_text, memo_id, game_id,
+                )
 
     def _determine_my_result(self, winner_name: str | None,
                              loser_name: str | None) -> str:

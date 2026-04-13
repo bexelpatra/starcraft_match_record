@@ -150,10 +150,11 @@ def _show_with_overlay(title: str, opponents: list[dict], duration: int) -> None
     root.attributes("-alpha", 0.85)
     root.overrideredirect(True)
 
-    # 상대 수에 따라 높이 동적 조절
+    # 상대 수에 따라 높이 동적 조절 - 메모 있는 상대는 추가 높이
     base_height = 60  # 제목 + 구분선 영역
     row_height = 20
-    height = base_height + row_height * max(len(opponents), 1) + 15
+    memo_extra = sum(1 for opp in opponents if opp.get("memo"))
+    height = base_height + row_height * max(len(opponents), 1) + row_height * memo_extra + 15
     width = 320
 
     # 화면 오른쪽 상단에 배치
@@ -194,6 +195,15 @@ def _show_with_overlay(title: str, opponents: list[dict], duration: int) -> None
             row, text=record, font=("Consolas", 9),
             fg=record_color, bg=bg_color, anchor="e",
         ).pack(side="right")
+
+        # 메모가 있으면 별도 행으로 표시
+        memo = opp.get("memo")
+        if memo:
+            memo_label = tk.Label(
+                root, text=f"  메모: {memo}", font=("Consolas", 8),
+                fg="#ffd93d", bg=bg_color, anchor="w",
+            )
+            memo_label.pack(fill="x", padx=20)
 
     # duration 초 후 자동 닫힘
     root.after(duration * 1000, root.destroy)
