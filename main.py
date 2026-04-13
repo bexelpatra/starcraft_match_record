@@ -456,7 +456,8 @@ def main():
     setup_logging(args.verbose)
 
     if not args.command:
-        parser.print_help()
+        # 인자 없이 실행하면 GUI를 띄운다 (exe 더블클릭 시)
+        cmd_gui()
         return
 
     cfg = config.load()

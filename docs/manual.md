@@ -32,14 +32,16 @@ Python 없이 exe로 실행하고 싶다면:
 ```powershell
 pip install pyinstaller
 
-# GUI 모드 포함 단일 exe 빌드
-pyinstaller --onefile --name StarRecord --add-data "config.json;." main.py
+# GUI 포함 단일 exe 빌드 (콘솔 창 숨김)
+pyinstaller --onefile --windowed --name StarRecord main.py
 ```
 
 빌드 완료 후 `dist/StarRecord.exe`가 생성된다.
-이후 사용법에서 `python main.py` 대신 `StarRecord.exe`로 대체하면 된다.
 
-> config.json이 아직 없다면 빌드 전 `python main.py`를 한 번 실행해 기본 설정 파일을 생성한다.
+**exe 더블클릭 → GUI 설정 화면이 바로 뜬다.**
+닉네임, 리플레이 폴더, SC 경로를 GUI에서 설정하고 바로 실행할 수 있다.
+
+CLI를 쓰고 싶으면 cmd에서 `StarRecord.exe daemon` 등으로 실행하면 된다.
 
 ---
 
